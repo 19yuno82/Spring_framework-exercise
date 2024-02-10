@@ -1,0 +1,26 @@
+<!-- 
+	thymeleaf : html 파싱 (EL/JSTL과 유사)
+	
+	jsp의 역할은 view, view는 로직을 포함 X, >> jsp 말고 html 로 쓰자
+	JSTL를 대체 가능한 java기반의 파싱 방법이 필요
+	
+	html 태그에 스키마를 추가
+	
+ -->
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>HTML 메인 페이지</h1>
+	<table>
+	<!-- th:each="변수:배열" -->
+		<tr th:each="name : ${names}">
+		<td th:text="${name}">이름</td>
+		</tr>
+	</table>
+</body>
+</html>
